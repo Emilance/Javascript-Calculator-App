@@ -1,0 +1,136 @@
+:root{
+    --container-color:black;
+    --button-color: rgb(29, 25, 25);
+    --text-color: white;
+    --text-color2: rgb(248, 239, 239);
+    --button-operatorcolor:rgb(8, 8, 253);
+    
+}
+
+*{
+    box-sizing: border-box;
+  
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+}
+
+.calc-container{
+    background-color: var(--container-color);
+    height: 85vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+
+    
+}
+
+.calc-output{
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.button-output{
+    height:3rem;
+    color:var(--text-color);
+    text-align: right;
+    font-size: 2.5rem;
+    margin: 5px;
+    margin-bottom: 15px;
+   
+}
+
+.calc-result-output{
+  
+    height:2rem;
+    margin-bottom: 25px;
+    color:var(--text-color2);
+    text-align: right;
+    font-size: 1rem;
+    margin-right: 15px;
+   font-weight: bold;
+
+}
+
+.button-container{
+    flex:2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
+
+}
+
+.btn{
+    background-color: var(--button-color);
+    color: var(--text-color2);
+    font-size: 1.5rem;
+    border:none;
+    
+}
+
+.btn > .rcircle {
+    position:absolute;
+    background:blue;
+    border-radius: 50%;
+   animation: ripples 0.5s linear 1;
+}
+
+@keyframes ripples {
+    0%{
+        height:0px;
+        width:0px;
+        opacity:0.5;
+    
+    }
+    100%{
+        height:100px;
+        width:100px;
+        opacity:0;
+    }
+}
+
+
+.btn.operator.equal {
+    grid-row:span 2;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+.btn.operator.equal > button{
+    color:var(--text-color2);
+    background-color:var(--button-operatorcolor);
+    width:65%;
+    height: 90%;
+    border-radius: 10%;
+    border:none;
+    font-size: 3rem;
+}
+
+.btn.operator {
+    color:var(--button-operatorcolor);
+}
+
+.btn.operator >span{
+    font-size: 1rem;
+    
+}
+
+.btn.operator >span {
+    border:1px solid var(--button-operatorcolor);
+     border-radius: 50%;
+     padding: 1px;
+}
+
+
