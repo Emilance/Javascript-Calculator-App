@@ -104,7 +104,7 @@ body{
     grid-row:span 2;
     display: flex;
     justify-content: center;
-    
+
    
 }
 
@@ -116,15 +116,18 @@ body{
     border-radius: 10%;
     border:none;
     font-size: 3rem;
+    z-index: 3000;
+   
 }
 
 .btn.operator {
     color:var(--button-operatorcolor);
+    
 }
 
 .btn.operator >span{
     font-size: 1rem;
-    
+    pointer-events: none;
 }
 
 .btn.operator >span {
