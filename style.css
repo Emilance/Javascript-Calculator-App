@@ -12,6 +12,10 @@
   
 }
 
+body, html {
+    overflow: hidden;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -22,8 +26,8 @@ body{
 
 .calc-container{
     background-color: var(--container-color);
-    height: 85vh;
-    width: 300px;
+    height: 45rem;
+    width: 35rem;
     display: flex;
     flex-direction: column;
     border-radius: 5%;
@@ -136,4 +140,16 @@ body{
      padding: 1px;
 }
 
-
+@media (max-width:700px) {
+    body{
+      
+        height:100vh;
+        width: 100vw;
+    
+    }
+    
+.calc-container{
+    width:90vw;
+    height: 90vh;
+}
+}
